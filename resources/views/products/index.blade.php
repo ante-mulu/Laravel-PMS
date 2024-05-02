@@ -53,6 +53,44 @@
                 {{session('success')}}
             </div>
             @endif
+                <style>
+        body {
+            background-color: #f5f5f5;
+        }
+        table {
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        a {
+            text-decoration: none;
+        }
+        .amazing-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .amazing-btn-green {
+            background-color: #34D399;
+            color: white;
+        }
+        .amazing-btn-red {
+            background-color: #EF4444;
+            color: white;
+        }
+        .amazing-btn:hover {
+            opacity: 0.8;
+        }
+    </style>
+            <a href="/productupdate"><button class="btn">Update Product</button></a>
             <table class="table-auto w-full">
                 <thead>
                     <tr>
@@ -61,8 +99,6 @@
                         <th class="px-4 py-2">Qty</th>
                         <th class="px-4 py-2">Price</th>
                         <th class="px-4 py-2">Description</th>
-                        {{-- <th class="px-4 py-2">Edit</th>
-                        <th class="px-4 py-2">Delete</th> --}}
                     </tr>
                 </thead>
                 <tbody>
@@ -73,18 +109,6 @@
                         <td class="border px-4 py-2">{{$product->qty}}</td>
                         <td class="border px-4 py-2">{{$product->price}}</td>
                         <td class="border px-4 py-2">{{$product->description}}</td>
-                        {{-- <td class="border px-4 py-2">
-                            <a href="{{route('product.edit', ['product'=>$product])}}" class="amazing-btn amazing-btn-green hover:bg-green-700">Edit</a>
-                        </td>
-                        <td class="border px-4 py-2">
-
-                            <form method="post" action="{{route('product.delete',['product'=>$product])}}">
-                            @csrf
-                            @method('DELETE')
-                                <input type="submit" value="Delete"  class="amazing-btn amazing-btn-red hover:bg-red-700">
-                            </form>
-
-                        </td> --}}
 
                     </tr>
                     @endforeach

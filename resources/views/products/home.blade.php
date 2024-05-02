@@ -34,7 +34,7 @@
     <div class="space-y-4">
         <a href="/product/create"><button class="btn">Add Product</button></a>
         <a href="/product"> <button class="btn">View Product</button></a>
-        <a href=""><button class="btn">Update Product</button></a>
+        <a href="/productupdate"><button class="btn">Update Product</button></a>
 
 
 

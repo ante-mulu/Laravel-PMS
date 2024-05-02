@@ -40,6 +40,18 @@
         input[type="submit"]:hover {
             background-color: #059669;
         }
+        .btn {
+            background-color: #4f46e5;
+            color: white;
+            border-radius: 9999px;
+            padding: 12px 24px;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .btn:hover {
+            background-color: #4338ca;
+        }
     </style>
 </head>
 <body>
@@ -65,7 +77,7 @@
             <input type="text" name="description" id="description" placeholder="Description">
         </div>
         <div>
-            <input type="submit" value="Submit" class="mt-4 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+            <button type="submit" class="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Submit</button>
         </div>
     </form>
 </div>

@@ -6,6 +6,7 @@ use App\Http\Controllers\ProductController;
 
 Route::get('/', [ProductController::class,'welcome'])->name('welcome');
 Route::get('/product', [ProductController::class, 'index'])->name('products.index');
+Route::get('/productupdate', [ProductController::class, 'updateview'])->name('products.productview');
 Route::get('/product/create', [ProductController::class,'create'])->name('product.create');
 Route::post('/product', [ProductController::class,'store'])->name('product.store');
 Route::get('/product/{product}/edit', [ProductController::class,'edit'])->name('product.edit');

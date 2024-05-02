@@ -25,6 +25,10 @@ class ProductController extends Controller
 
         return redirect(route('products.index'));
     }
+    public function updateview(){
+        $products=Product ::all();
+        return view('products.updateview',['products'=>$products]);
+    }
     public function edit($id){
         $product=Product::find($id);
         return view('products.edit',['product'=>$product]);
